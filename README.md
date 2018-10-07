@@ -33,7 +33,7 @@ Yours,
 Friendly Mail
 ```
 
-### Script Generated data
+### Script Generated Data
 
 #### meta.dat
 This file holds the date of the last run.
