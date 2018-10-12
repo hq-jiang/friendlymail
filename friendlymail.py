@@ -97,7 +97,7 @@ if __name__=="__main__":
     args = parser.parse_args()
 
     # Set paths to location of source file, so symlinks can be used
-    os.chdir(os.path.expanduser('~/Desktop/friendlymail'))
+    os.chdir(os.path.expanduser('/home/hanqiu/Desktop/friendlymail'))
     path = os.getcwd()
     log_path = os.path.join(path, 'history.log')
     meta_path = os.path.join(path, 'meta.dat')
@@ -139,7 +139,7 @@ if __name__=="__main__":
                                   day=1)
         recon_date = start_date + datetime.timedelta(hash_ident(ident))
         if recon_date > prev_date and recon_date <= curr_date:
-            if not argparse.debug:
+            if not args.debug:
                 output_mail = send_mail(person, 'Grüße', message_path)
                 print(output_mail)
                 write_log(log_path, 'Email sent to ' + person['name'] + ' ' + person['email'])
